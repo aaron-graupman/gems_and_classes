@@ -1,7 +1,5 @@
 require 'pry'
 require 'babbler'
-require_relative 'person'
-require_relative 'mammal'
 
 # puts
 # puts Babbler.babble
@@ -56,31 +54,3 @@ end
 #     @gender
 #   end
 # end
-
-person_1 = Person.new('Jake Sorce', 27, 'male')
-person_2 = Person.new('Dave Jungst', 36, 'male')
-person_3 = Person.new('Madelaine', 19, 'female')
-
-# Class method talk
-Person.talk
-Babbler.babble
-
-class Mammal
-  attr_accessor :fur_color, :name, :species
-
-  def initialize
-    puts
-    puts "What is the mammal's fur color?"
-    @fur_color = gets.strip
-    puts
-    puts "What is the mammal's name?"
-    @name = gets.strip
-    puts
-    puts "What is the mammal's species?"
-    @species = gets.strip
-  end
-end
-
-mammal_1 = Mammal.new
-
-binding.pry
